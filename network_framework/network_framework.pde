@@ -124,8 +124,10 @@ void sendData(char* thisData) {
   } 
   else {
     debug("connection failed");
+    client.stop();
     Client client(server, PORT);
     setup();
+    client.flush();
   }
 }
 

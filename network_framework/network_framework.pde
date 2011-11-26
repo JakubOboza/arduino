@@ -124,6 +124,8 @@ void sendData(char* thisData) {
   } 
   else {
     debug("connection failed");
+    Client client(server, PORT);
+    setup();
   }
 }
 
